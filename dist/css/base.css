@@ -14,16 +14,17 @@ fieldset, img { border:0; }
 button, input, select, textarea { font-size:100%; }
 table { border-collapse:collapse; border-spacing:0; }
 
-.top-head{
+.top-head,.main-zhuce,.geren{
 	width: 1000px;
 	margin: 0 auto;
 	font-size: 12px;
 	color: #666;
 }
+/*头部*/
 .top-head{
 	height: 88px;
-	border: 1px solid #000000;
-	background: red;
+	/*border: 1px solid #000000;*/
+	
 	
 }
 .top-logo{
@@ -37,10 +38,70 @@ table { border-collapse:collapse; border-spacing:0; }
 	float: left;
 }
 .top-nav{
+	text-indent: 5px;
+	float: right;
+	display: inline-block;
 	position: relative;
+	
 }
 .top-nav .bz{
+	/*border: 1px solid #666666;*/
+	margin: 48px 0 0 20px;
+	cursor: pointer;
+	width: 77px;
+	height: 14px;
 	float: right;
+	display: inline;
+	/*background: red;*/
+	
+	
+	
+}
+
+.top-nav .bz b{
+	margin-left: 10px ;
+	width: 14px;
+	height: 14px;
+	/*background: yellow;*/
+	position: absolute;
+}
+.top-nav .bz .sj{
+	
+	width:0px;
+	height: 0px;
+	border: 5px solid #FFFFFF;
+	border-top: 5px solid #cecece;
+	position: absolute;
+	top: 5px;
+	left: 2px;
+	
+}
+.top-nav ul{
+	
+	margin-left: 20px;
+	width: 77px;
+	
+}
+
+.top-nav ul li{
+	position: relative;
+	/*background: chartreuse;*/
+	border: 1px solid #666666;
+	height: 14px;
+	line-height: 14px;
+	
+}
+.top-nav .xl{
+	position: absolute;
+	margin-top: 62px;
+	display: none;
+	width: 77px;
+	
+	
+}
+.top-nav:hover .xl{
+ display: block;
+ 
 }
 .top-zc{
 	margin-top: 48px;
@@ -48,4 +109,62 @@ table { border-collapse:collapse; border-spacing:0; }
 	height: 14px;
 	line-height: 14px;
 	color: #999;
+}
+.top-zc a{
+	margin-left: 20px;
+}
+/*中间*/
+.geren{
+	height: 60px;
+	/*border: 1px solid #000000;*/
+	
+	
+}
+.geren h3{
+	float: right;
+	
+
+	background: #FFFFFF;
+	margin-right: 20px;
+}
+.geren h3 span{
+	text-align: center;
+	border: 2px solid #eaeaea;
+	display: inline-block;
+	width: 118px;
+	height: 40px;
+	line-height: 40px;
+	color: #ff9900;
+	
+}
+.geren h3 span:first-child{
+	border-bottom: none;
+	margin-top: 20px;
+}
+.main-zhuce{
+	width: 875px;
+	height: 550px;
+	border: 3px solid #eaeaea;
+	padding: 50px 0 0 125px;
+}
+
+.main-zhuce p{
+	width: 260px;
+	
+	height: 42px;
+	line-height: 42px;
+	font-size: 16px;
+	float: left;
+	border:1px solid #000000;
+}
+.main-zhuce p span{
+	display: inline-block;
+	float: right;
+	margin-right: 30px;
+}
+.main-zhuce input{
+	width: 255px;
+	height: 42px;
+	padding-left: 45px;
+	background: none;
 }
