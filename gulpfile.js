@@ -17,7 +17,7 @@ gulp.task('copy-index',function(){
  }) 
   gulp.task('data',function(){ 
 
-	return gulp.src(['html']).pipe(gulp.dest('dist/html'));
+	return gulp.src(['html/*.html']).pipe(gulp.dest('dist/html'));
 
  })
    gulp.task('data',function(){ 
@@ -37,4 +37,5 @@ gulp.task('copy-index',function(){
  })
 gulp.task('sever',function(){ 
 	connect.server({root:'dist'});
-}) 
+})
+ 
