@@ -20,9 +20,14 @@ gulp.task('copy-index',function(){
 	return gulp.src(['html']).pipe(gulp.dest('dist/html'));
 
  })
+   gulp.task('data',function(){ 
+
+	return gulp.src(['css/*.css']).pipe(gulp.dest('dist/css'));
+
+ })
 
    gulp.task('watch',function(){
-	 gulp.watch('index.html',['copy-index']); 	gulp.watch('img/**',['img']); 	gulp.watch(['html','js/*.js','!json/package.json'],['data']);
+	 gulp.watch('index.html',['copy-index']); 	gulp.watch('img/**',['img']); 	gulp.watch(['html/*.html','js/*.js','css/*.css','!json/package.json'],['data']);
    }) 
 
 	gulp.task('sass',function(){
