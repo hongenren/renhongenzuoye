@@ -14,7 +14,7 @@ fieldset, img { border:0; }
 button, input, select, textarea { font-size:100%; }
 table { border-collapse:collapse; border-spacing:0; }
 
-.top-head,.main-zhuce,.geren,footer{
+.top-head,.main-zhuce,.geren,footer,.content{
 	width: 1000px;
 	margin: 0 auto;
 	font-size: 12px;
@@ -116,7 +116,7 @@ table { border-collapse:collapse; border-spacing:0; }
 /*中间*/
 .main-warp{
 	height: 640px;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	background: url(../img/bg.jpg);
 }
 .geren{
@@ -163,7 +163,7 @@ table { border-collapse:collapse; border-spacing:0; }
 	line-height: 42px;
 	font-size: 16px;
 	float: left;
-	border:1px solid #000000;
+	/*border:1px solid #000000;*/
 }
 .main-zhuce p span{
 	display: inline-block;
@@ -190,7 +190,7 @@ table { border-collapse:collapse; border-spacing:0; }
 	position: absolute;
 	left: 270px;
 	top: 10px;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 }
 .dier b{
 	background: url(../img/regLogin-8.png)no-repeat top left;
@@ -228,7 +228,7 @@ table { border-collapse:collapse; border-spacing:0; }
 	height: 43px;
 	line-height: 43px;
 	text-align: center;
-	border: 1px solid #000000;
+	/*border: 1px solid #000000;*/
 	margin-left: 240px;
 }
 .ryzc input{
@@ -247,12 +247,25 @@ table { border-collapse:collapse; border-spacing:0; }
 	margin-top: 30px;
 	margin-left: 240px;
 }
+.main-zhuce input{
+	border: 1px solid #CCCCCC;
+}
 /*结束*/
 .footer-warp{
 	background: #CECECE;
 	margin-top: 20px;
 }
 footer{
-	height: 300px;
+	height: 100px;
+	padding-top: 150px;
 	
+}
+footer p{
+	width: 1000px;
+	height: 30px;
+	color: #333;
+	text-align: center;
+}
+footer p:last-child{
+	color: #cf0404;
 }
