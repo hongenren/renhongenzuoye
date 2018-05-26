@@ -12,7 +12,7 @@ gulp.task('copy-index',function(){
  }); 
  gulp.task('data',function(){ 
 
-	return gulp.src(['js/*.js']).pipe(gulp.dest('dist/data'));
+	return gulp.src(['js/*.js']).pipe(gulp.dest('dist/js'));
 
  }) 
   gulp.task('data',function(){ 
@@ -38,3 +38,4 @@ gulp.task('copy-index',function(){
 gulp.task('sever',function(){ 
 	connect.server({root:'dist'});
 })
+ 

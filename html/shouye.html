@@ -4,6 +4,9 @@
 		<meta charset="UTF-8">
 		<title>酒仙网-白酒、红酒、洋酒</title>
 		<link rel="stylesheet" type="text/css" href="../dist/css/common.css"/>
+		<script src="../js/jquery-1.11.0.js" type="text/javascript">
+			
+		</script>
 	</head>
 	<body>
 		<!--头部-->
@@ -429,6 +432,33 @@
 			</div>
 			
 		</div>
+		<div class="banner">
+			<div class="banner-pic">
+				<ul>
+					<li class="banneryi"></li>
+					<li class="bannerer"></li>
+					<li class="bannersan"></li>
+					<li class="bannersi"></li>
+				</ul>
+			</div>
+		</div>
 		
 	</body>
+	<script type="text/javascript">
+		$(function(){
+			$picList=$(".banner-pic li");
+			var i=0;
+			
+		var timer = setInterval(function(){
+			i++;
+			if(i==$picList.length-1){
+				i=0;
+			}
+			$picList.eq(i).fadeIn().animate({},2000)
+			.siblings().fadeOut().animate({},2000)
+			
+		},3000)
+			
+		})
+	</script>
 </html>
