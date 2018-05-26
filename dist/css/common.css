@@ -597,6 +597,7 @@ header{
 .catitemss{
 	height: 60px;
 }
+/*sss*/
 .menu-box{
 	width: 615px;
     height: 470px;
@@ -605,7 +606,8 @@ header{
     left: 188px;
     top: 34px;
     box-shadow: 0 0 4px 0 #ccc;
-    border: 1px solid #000000;
+    display: none;
+    /*border: 1px solid #000000;*/
 }
 .menucon{
 	width: 400px;
@@ -629,11 +631,62 @@ header{
 	float: left;
 	background: #fff;
 }
-.menu-list{
+.menuitem-left .menu-list{
 	padding: 15px 0 10px;
 	width: 280px;
     margin: 0 15px 0 15px;
     padding: 10px 0 10px;
     overflow: hidden;
     border-top: 1px dotted #ccc;
+    border-bottom: 1px dashed #666666;
+}
+.menu-list p{
+	 margin: 0 0 0 -1px;
+    line-height: 22px;
+   
+    overflow: hidden;
+}
+.menu-list p a{
+	display: inline-block;
+    float: left;
+    white-space: nowrap;
+    padding: 0 8px;
+    background: url(../img/menuLine.jpg) no-repeat scroll left center;
+   
+   
+ 
+}
+.menu-box .ayanse{
+	color:#f60
+}
+.menuitem-left .menkong{
+	height: 229px;
+	width: 90px;
+	float: left;
+	overflow: hidden;
+}
+.menuitem-left .mekong{
+	height: 229px;
+	width: 280px;
+	margin: 0 15px 0 15px;
+	float: left;
+	background: #FFFFFF;
+	
+}
+.menufoc{
+	float: right;
+}
+.menufoc img{
+	width: 214px;
+	height: 470px;
+}
+.menucon{
+	float: left;
+	/*border: 1px solid #000000;*/
+}
+.catitem:hover{
+	background: #E5E5E5;
+}
+.nav-right:hover .menu-box{
+	display: block;
 }
