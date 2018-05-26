@@ -29,10 +29,10 @@ a:hover{
 		text-decoration:underline;
 }
 .header-warp{
-	
 background: #f2f2f2;	
+/*background: yellow;*/
 }
-header{
+header,.content{
 	margin: 0 auto;
 	width: 1200px;
 }
@@ -54,6 +54,11 @@ header{
 	display: inline-block;
 	color: #999;
 	margin-right: 5px;
+
+	
+}
+.header-left a:hover{
+	color: #cc0001;
 }
 .header-right{
 	float: right;
@@ -64,6 +69,7 @@ header{
 	line-height: 26px;
 	padding: 0 4px 0 7px;
 	position: relative;
+	text-align: center;
 }
 .header-right .xsj{
 	width: 74px;
@@ -76,8 +82,10 @@ header{
 	top: 8px;
 	right: 5px;
 	background:url(../img/public-24.png)no-repeat top left;
+	/*background: url(../img/jxPho-code.jpg);*/
 	background-position-x: -100px;
 	background-position-y: 4px;
+	
 }
 .header-right .xsj a{
 	display: inline-block;
@@ -89,6 +97,7 @@ header{
 	display: none;
 	margin-left: -5px;
 	background: #fff;
+	position: absolute;
 }
 .header-right .xsj:hover .wdjx{
 		
@@ -134,30 +143,21 @@ header{
 	
 	
 }
-.header-right .zsrz p{
-	height: 80px;
-	width: 80px;
-	/*border: 1px solid #000000;*/
-	position: relative;
-	/*top: 8px;
-	left: 5px;*/
-	background:url(../dist/img/jxPho-code.jpg)no-repeat top left;
-	display: none;
-}
-.header-right .zsrz:hover p{
-	display: block;
-}
+
 .header-right .sjgjx{
 	width: 81px;
 	text-align: center;
-	background:#cc0001;
-	
+
 }
 .header-right .sjgjx a{
 	color: #fff;
 	height: 16px;
 	line-height: 16px;
 	padding: 0 3px;
+	background:#cc0001;
+	width: 74px;
+	text-indent: 12px;
+	
 }
 .header-right .sjgjx span{
 	width: 14px;
@@ -165,8 +165,195 @@ header{
 	/*border: 1px solid #000000;*/
 	position: absolute;
 	top: 8px;
-	left: 5px;
+	left: 11px;
 	background:url(../img/public-24.png)no-repeat top left;
 	background-position-x: -62px;
 	background-position-y: 0px;
+}
+
+.header-right .sjgjx p{
+	height: 80px;
+	width: 80px;
+	/*border: 1px solid #000000;*/
+	position: absolute;
+	top: 26px;
+	left: 5px;
+	background:url(../img/jxPho-code.jpg)no-repeat top left;
+	display: none;
+}
+.header-right .sjgjx:hover p{
+	display: block;
+}
+.header-right .wzdh{
+	width: 78px;
+	
+}
+.header-right .wzdh span:first-child{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	
+	/*border: 1px solid #000000;*/
+	background:url(../img/public-24.png)no-repeat top left;
+	background-position-x: -80px;
+	background-position-y: 0px;
+}
+.header-right .wzdh .xil{
+	width: 9px;
+	height: 8px;
+	/*border: 1px solid #000000;*/
+	position: absolute;
+	top: 8px;
+	right: 5px;
+	background:url(../img/public-24.png)no-repeat top left;
+	/*background: url(../img/jxPho-code.jpg);*/
+	background-position-x: -100px;
+	background-position-y: 4px;
+}
+
+
+.header-right .wzdh:hover{
+	background: #fff;
+	
+}
+.header-right .wzdh:hover .gw-warp{
+	display: block;
+}
+.wzdh .gw-warp{
+	width: 205px;
+	border: 1px solid #e5e5e5;
+	position: absolute;
+	top: 27px;
+	left: -1px;
+	background: #fff;
+	/*padding-left: 5px;*/
+	display: none;
+}
+.wzdh .wzdh-gw{
+	width: 165px;
+	height: 80px;
+	padding: 6px 20px 8px;
+	border-bottom: 1px solid #ededed;
+	/*background: #999999;*/
+}
+.wzdh .wzdh-gw h3{
+	font-weight: 900;
+	text-align: start;
+	margin-left: 8px;
+
+}
+.wzdh .wzdh-gw li{
+	width: 38px;
+	text-align: center;
+}
+.wzdh .yanse{
+	background: #CECECE;
+}
+.wzdh p{
+	height: 40px;
+	background: #CCCCCC;
+	line-height: 40px;
+	
+}
+.header-right .khfu {
+	width: 80px;
+	
+}
+.header-right .khfu span:first-child{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	
+	position: absolute;
+	top: 8px;
+	left: 6px;
+	
+	/*border: 1px solid #000000;*/
+	background:url(../img/public-24.png)no-repeat top left;
+	background-position-x: -90px;
+	background-position-y: -265px;
+}
+
+.header-right .khfu .khfu-xsj{
+	width: 9px;
+	height: 8px;
+	/*border: 1px solid #000000;*/
+	position: absolute;
+	top: 8px;
+	right: 5px;
+	background:url(../img/public-24.png)no-repeat top left;
+	/*background: url(../img/jxPho-code.jpg);*/
+	background-position-x: -100px;
+	background-position-y: 4px;
+}
+
+.header-right .khfu a{
+	display: inline-block;
+	width: 74px;
+	height: 26px;
+	text-align: center;
+}
+.header-right .khfu .wdjx{
+	display: none;
+	margin-left: -5px;
+	background: #fff;
+	position: absolute;
+}
+.header-right .khfu:hover .wdjx{
+		
+		display: block;
+}
+.header-right .khfu:hover{
+	background: #fff;
+
+}
+.header-right .kfrx b{
+	color:  #cc0001;
+}
+/*logo*/
+.logo-jiu{
+	height: 90px;
+	
+	background: url(../img/4bed8ed42acf4ed2ba67f6d3e612a674.jpg)no-repeat top center/cover ;
+
+}
+/**/
+/*sousuo*/
+.content{
+	height: 125px;
+	border:1px solid #000000 ;
+	
+}
+.content-left{
+	height: 65px;
+	width: 257px;
+	border:1px solid #000000 ;
+	float: left;
+	background: yellow;
+	margin-top: 30px;
+}
+
+.content-center{
+	width: 540px;
+	border:1px solid #000000 ;
+	height: 64px;
+	float: left;
+	background: red;
+	margin: 32px 0 0 20px;
+}
+.ss-warp{
+	width: 540px;
+	height: 38px;
+	border:1px solid #000000 ;
+}
+.content-right{
+	width: 363px;
+	height: 64px;
+	border:1px solid #000000 ;
+	float: right;
+	background: green;
 }
