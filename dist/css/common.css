@@ -30,7 +30,7 @@ a:hover{
 }
 .header-warp{
 background: #f2f2f2;	
-/*background: yellow;*/
+background: yellow;
 }
 header,.content,.nav{
 	margin: 0 auto;
@@ -726,4 +726,8 @@ header{
 .bannersan{
 
 	background: url(../img/db2c63afa8a64ca4961c5df7d5133e56.jpg)no-repeat top center/cover;
+}
+body{
+	height: 1000px;
+	background: red;
 }
