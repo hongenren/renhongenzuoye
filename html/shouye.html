@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>酒仙网-白酒、红酒、洋酒</title>
-		<link rel="stylesheet" type="text/css" href="../dist/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
 		<script src="../js/jquery-1.11.0.js" type="text/javascript">
 			
 		</script>
+		
+		
 	</head>
 	<body>
 		<!--头部-->
@@ -121,6 +123,7 @@
 						<form action="" method="post">
 							<input class="seach-fm" type="text" name="" id="" placeholder="老酒特卖" value="" />
 							<input class="seach-tj" type="submit" name="" id="" value="搜&nbsp;索" />
+							<div class="seach-jk"></div>
 						</form>
 					</div>
 					<div class="hotmai">
@@ -442,8 +445,11 @@
 				</ul>
 			</div>
 		</div>
-		
+		<div style="height: 100px;" class="renhongen">任洪恩大笨蛋</div>
 	</body>
+	<script src="../js/new_file.js" type="text/javascript">	</script>
+			
+	
 	<script type="text/javascript">
 		$(function(){
 			$picList=$(".banner-pic li");
@@ -454,11 +460,19 @@
 			if(i==$picList.length-1){
 				i=0;
 			}
-			$picList.eq(i).fadeIn().animate({},2000)
-			.siblings().fadeOut().animate({},2000)
+			$picList.eq(i).fadeIn().animate({},100)
+			.siblings().fadeOut().animate({},100)
 			
 		},3000)
 			
 		})
+	</script>
+	
+	<script type="text/javascript">
+		//接口
+		//http://list.jiuxian.com/assKeyWords.htm?t=1527407326171&callback=jQuery111109182610770360298_1527407312983&wd=a&area=2&searchUserKey=ff0ae2d3-f488-163f-9f50-58e0042f5548&randomTest=0.7064751299023635&_=1527407312984
+
+
+		
 	</script>
 </html>

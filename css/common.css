@@ -30,7 +30,7 @@ a:hover{
 }
 .header-warp{
 background: #f2f2f2;	
-background: yellow;
+/*background: yellow;*/
 }
 header,.content,.nav{
 	margin: 0 auto;
@@ -350,6 +350,7 @@ header{
 	width: 534px;
 	height: 32px;
 	border:3px solid #c00 ;
+	position: relative;
 }
 .ss-warp .seach-fm{
 	width: 439px;
@@ -358,7 +359,18 @@ header{
 	border: 0;
 	color: #666;
 	float: left;
+	
 }
+.ss-warp .seach-jk{
+
+	width: 400px;
+	position: absolute;
+	border:1px solid #333333;
+	height: 700px;
+	background: #666666;
+	z-index: 3;
+}
+
 .ss-warp .seach-tj{
 	width: 85px;
 	height: 32px;
@@ -727,7 +739,10 @@ header{
 
 	background: url(../img/db2c63afa8a64ca4961c5df7d5133e56.jpg)no-repeat top center/cover;
 }
-body{
+
+.renhongen{
 	height: 1000px;
-	background: red;
+	background: yellow;
+	width: 100px;
+	
 }
