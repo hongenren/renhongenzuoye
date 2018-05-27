@@ -7,7 +7,11 @@
 			script.src="http://list.jiuxian.com/assKeyWords.htm?t=1527407450687&callback=jsonp&wd="+atxt.value+"&area=2&searchUserKey=ff0ae2d3-f488-163f-9f50-58e0042f5548&randomTest=0.7064751299023635&_=1527407312986";	
 			document.body.appendChild(script);
 			document.body.removeChild(script);
+			alist.style.display="block"
 	}
+	
+		
+	
 	function jsonp(data){
 			var str="";
 			var ara=[];
@@ -17,7 +21,7 @@
 			
 	
 		for(var i=0;i<arr.length;i++){
-			str+="<p>"+arr[i].word+"</p><p>约"+arr[i].count+"件商品</p>"
+			str+="<li><p><a href='list.jiuxian.com/search.htm?key="+arr[i].word+"'>"+arr[i].word+"</a></p><p>约"+arr[i].count+"件商品</p></li>"
 			
 		}
 			console.log(str)
@@ -25,3 +29,7 @@
 		}
 		
 	}
+		atxt.onmouseover=function(){
+			alist.style.display="none"
+		}
+	

@@ -360,15 +360,30 @@ header{
 	color: #666;
 	float: left;
 	
+	
 }
 .ss-warp .seach-jk{
 
-	width: 400px;
+	width: 450px;
 	position: absolute;
-	border:1px solid #333333;
-	height: 700px;
-	background: #666666;
-	z-index: 3;
+	left: -3px;
+	top: 35px;
+	border:1px solid #ddd;
+	
+	/*background: #666666;*/
+	z-index: 1;
+}
+.seach-jk li{
+	justify-content: space-between;
+	display: flex;
+	height: 30px;
+	line-height: 30px;
+	background: #fff;
+	border-bottom:1px dashed #999999;
+
+}
+.seach-jk li:hover{
+	background: pink;
 }
 
 .ss-warp .seach-tj{
