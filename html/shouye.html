@@ -443,41 +443,129 @@
 		<div class="banner">
 			<div class="banner-pic">
 				<ul>
-					<li class="banneryi"></li>
-					<li class="bannerer"></li>
-					<li class="bannersan"></li>
-					<li class="bannersi"></li>
+					<li class="banneryi">
+						<div class="banner-rightpic">
+<img src="../img/539b1f88e0fc4962a4ad79ec9dff3d77.jpg" />	
+<img src="../img/383cfda6d20947b48ada2db7bb04544e.png" />
+<img src="../img/9ab273c28d02407f860163954d0860e7.png" />
+						</div>
+					</li>
+					<li class="bannerer">
+						<div class="banner-rightpic">
+<img src="../img/383cfda6d20947b48ada2db7bb04544e.png" />
+<img src="../img/539b1f88e0fc4962a4ad79ec9dff3d77.jpg" />	
+
+<img src="../img/9ab273c28d02407f860163954d0860e7.png" />
+						</div>
+						
+					</li>
+					<li class="bannersan">
+						<div class="banner-rightpic">
+<img src="../img/539b1f88e0fc4962a4ad79ec9dff3d77.jpg" />	
+
+<img src="../img/9ab273c28d02407f860163954d0860e7.png" />
+<img src="../img/383cfda6d20947b48ada2db7bb04544e.png" />
+						</div>
+					</li>
+					<li class="bannersi">
+					<div class="banner-rightpic">
+
+<img src="../img/383cfda6d20947b48ada2db7bb04544e.png" />
+<img src="../img/539b1f88e0fc4962a4ad79ec9dff3d77.jpg" />	
+<img src="../img/9ab273c28d02407f860163954d0860e7.png" />
+						</div>
+					</li>
+					<li class="bannerwu">
+						<div class="banner-rightpic">
+
+<img src="../img/383cfda6d20947b48ada2db7bb04544e.png" />
+<img src="../img/9ab273c28d02407f860163954d0860e7.png" />
+<img src="../img/539b1f88e0fc4962a4ad79ec9dff3d77.jpg" />	
+						</div>
+					</li>
+					<!--<li class="bannerliu"></li>
+					<li class="bannerqi"></li>
+					<li class="bannerba"></li>
+					<li class="bannerjiu"></li>-->
+				</ul>
+				
+			</div>
+			<div class="banner-number">
+				<ul>
+					<li class="on">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
 				</ul>
 			</div>
+			
 		</div>
-		<div style="height: 100px;" class="renhongen">任洪恩大笨蛋</div>
+<!--主要内容区 最大的width100%-->		
+		<div class="mainwarp">
+			<!--中间width1200 高度自适应-->
+			<div class="mainbox">
+				<!---->
+				<div class="connectfirst">
+					
+					
+					
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		
+		
 	</body>
 	<script src="../js/new_file.js" type="text/javascript">	</script>
 			
 	
 	<script type="text/javascript">
-		$(function(){
+//lunbo
+	$(function(){
+	
 			$picList=$(".banner-pic li");
-			var i=0;
+			$picnum=$(".banner-number li")
+			$banner=$(".banner")
+			$number=$(".banner-number li")
+				var timer=null;
+				var i=0;
+		$picList.eq(0).show().fadeIn().animate({},100)
+			.siblings().fadeOut().animate({},100)	
+				show()
+		$number.hover(function(){
+			clearInterval(timer)
+					i = $(this).index();
+					move();
+		})
+		
+		$banner.mouseover(function(){
+			clearInterval(timer)
+		})
+		
+		$banner.mouseout(function(){
+			show()
+		})
+		function move(){				
 			
-		var timer = setInterval(function(){
-			i++;
-			if(i==$picList.length-1){
-				i=0;
-			}
 			$picList.eq(i).fadeIn().animate({},100)
 			.siblings().fadeOut().animate({},100)
-			
-		},3000)
-			
+		$picnum.eq(i).addClass("on").siblings().removeClass("on")
+		}
+		function show(){
+			timer=setInterval(function(){
+				i++;
+			if(i==$picList.length){
+				i=0;
+			}
+			move();
+			},2000)
+		}
 		})
+//lunbojieshu	
 	</script>
 	
-	<script type="text/javascript">
-		//接口
-		//http://list.jiuxian.com/assKeyWords.htm?t=1527407326171&callback=jQuery111109182610770360298_1527407312983&wd=a&area=2&searchUserKey=ff0ae2d3-f488-163f-9f50-58e0042f5548&randomTest=0.7064751299023635&_=1527407312984
 
-
-		
-	</script>
 </html>

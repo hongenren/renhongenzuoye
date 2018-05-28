@@ -1,4 +1,4 @@
-
+//seach 搜索的借口
 	var atxt=document.getElementsByClassName("seach-fm")[0];
 	var alist=document.getElementsByClassName("seach-jk")[0];
 		atxt.oninput=function(){
@@ -32,4 +32,8 @@
 		atxt.onmouseover=function(){
 			alist.style.display="none"
 		}
-	
+//seach 搜索的借口结束
+
+//轮播图效果
+
+//结束

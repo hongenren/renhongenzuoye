@@ -719,7 +719,7 @@ header{
 .nav-right:hover .menu-box{
 	display: block;
 }
-/*banner*/
+/*banners轮播图*/
 .banner{
 	height: 470px;
 	width: 100%;
@@ -754,10 +754,52 @@ header{
 
 	background: url(../img/db2c63afa8a64ca4961c5df7d5133e56.jpg)no-repeat top center/cover;
 }
+.bannersi{
 
-.renhongen{
-	height: 1000px;
-	background: yellow;
-	width: 100px;
+	background: url(../img/9693c6447d0b4685a1b9ee2a07c3c79f.jpg)no-repeat top center/cover;
+}
+.bannerwu{
+
+	background: url(../img/3cfde3d282cf4d83b7da1529c6b252d5.jpg)no-repeat top center/cover;
+}
+.banner-number{
+	position: absolute;
+	bottom: 30px;
+	left: 45%;
+}
+.banner-number li{
+	display: inline-block;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 8px;
+    background: #000000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    width: 40px;
+    text-align:center;
+    border-radius: 50%;
+    color: #fff;
+    
 	
+}
+.banner-number .on{
+	background: red;
+}
+.banner-rightpic img{
+	width: 190px;
+    height: 156px;
+    position: relative;
+    background: red;
+  
+   
+    margin-bottom: 1px;
+}
+.banner-rightpic{
+	height: 470px;
+    position: absolute;
+    right: 110px;
+    top: 0;
+    width: 190px;
+    
 }
