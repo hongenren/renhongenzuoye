@@ -32,7 +32,7 @@ a:hover{
 background: #f2f2f2;	
 /*background: yellow;*/
 }
-header,.content,.nav,.mainbox,.floorbanner1,.xsms{
+header,.content,.nav,.mainbox,.floorbanner1,.xsms,.whitewine,.contentThree,.ppjpd,.footerTop,.footerServices{
 	margin: 0 auto;
 	width: 1200px;
 }
@@ -889,14 +889,18 @@ header{
     height: 460px;
     overflow: hidden;
 }
-.indextabcon{
-	  width: 910px;
+.indextabcon8{
+	 width: 910px;
 	/*width: 696px;*/
     height: 442px;
     margin: 0 auto;
     padding: 10px 0;
     overflow: hidden;
     position: relative;
+    display: none;
+}
+.indextabcon9{
+	display: block;
 }
 .clearfix li{
 	 width: 182px;
@@ -1017,11 +1021,22 @@ header{
     border-top: none;
     height: 94px;
     padding-top: 10px;
+     
+   
 }
 .indextabnewlist{
 	width: 258px;
     margin: 0 auto;
+    height: 100px;
+   
 }
+.indextabnewcon1{
+	display: block;
+}	
+.indextabnewlist ul{
+	height: 100px;
+}
+
 .clearfixd{
 	padding-left: 3px;
 }
@@ -1105,7 +1120,7 @@ header{
 /*<!--first1层开始-->*/	
 .loadfirst{
 	width: 100%;
-	height: 1159px;
+	height: auto;
     overflow: hidden;
     background: none;
      
@@ -1284,8 +1299,10 @@ header{
 	 height:26px; 
 	 line-height:26px; 
 	 margin:5px auto 0 auto; 
-	 font-size:0; 
-	 padding-left:4px; overflow:hidden;
+	 
+	 padding-left:4px; 
+	 overflow:hidden;
+	
 }
 .racetime span{
 	font-size: 12px;
@@ -1300,4 +1317,828 @@ header{
     font-style: normal;
     text-align: center;
     padding: 0px 2px;
+}
+.whitewine{
+	background: #fff; */
+    position: relative;
+  	margin-top: 10px;
+}
+.whitetit{
+	height: 40px;
+    line-height: 40px;
+    background: #f9f9f9;
+    padding: 0 3px;
+}
+.comtitle{
+	float: left;
+   
+}
+.comicon1{
+	
+	width: 28px;
+    height: 29px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    font-family: Arial;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 29px;
+    font-style: normal;
+    background: url(../img/newIndexIcon-24.png)no-repeat;
+    background-position: 0 -95px;
+}
+.comtitle span{
+	display: inline-block;
+    vertical-align: middle;
+    color: #333;
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: "微软雅黑";
+}
+.rightmenu{
+	float: right;
+    margin-left: 50px;
+    display: inline;
+    color: #999;
+}
+.rightmenu a{
+	padding: 0 7px;
+    color: #999;
+}
+.rightmenu .bjg{
+	padding: 4px 7px;
+    color: #fff;
+    background: #d43d4e;
+    height: 21px;
+    line-height: 21px;
+    border-radius: 2px;
+}
+.rightmenu .bjg span{
+	font-family: "宋体";
+    padding-left: 3px;
+}
+.spiritwarp{
+	width: 1198px;
+
+
+	
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-top: 2px solid #c94b56;
+    height: 485px;
+    overflow: hidden;
+   
+}
+.bannerslier{
+	height: 485px;
+    width: 210px;
+    position: relative;
+    overflow: hidden;
+    float: left
+}
+.imgbox{
+	
+    height: 485px;
+    overflow: hidden;
+}
+.bigul{
+	/*margin-left: -210px;*/
+	width: 5000px;
+}
+.bigul li{
+	margin: 0;
+    padding: 0;
+	float: left;
+    width: 210px;
+    height: 485px;
+}
+.bigul li a img{
+	border: 0;
+	position: relative;
+	height: 485px;
+    width: 210px;
+}
+.btnbox{
+	bottom: 10px;
+    height: 13px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    
+}
+.btnbox .smalbtn{
+	display: inline-block;
+    height: 13px;
+    font-size: 0;
+}
+.btnbox em{
+	background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 13px;
+    margin: 0 4px;
+    overflow: hidden;
+    width: 13px;
+    cursor: pointer;
+}
+.btnbox .on{
+	background: #fc5422;
+}
+.indexconwarp1{
+	border: 0;
+}
+.clearfix1 li{
+	box-sizing: border-box;
+    /*width: 196px;*/
+    height: 242px;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ececec;
+    border-left: 1px solid #ececec;
+   
+}
+.comtitle .comicon2{
+	background-position: -30px -95px;
+}
+/**/
+.bottomwarp{
+	height: 162px;
+}
+.topTenConWrap{
+	height: 102px;
+	padding: 10px 0 15px 0;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.topTenWrap {
+    height: 161px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+}
+.hotWordBox {
+    float: left;
+    width: 186px;
+    border-right: 1px solid #ececec;
+    background: #f9f9f9;
+    height: 131px;
+    padding: 20px 10px 10px 14px;
+}
+
+
+.hotWordBox li {
+    width: 186px;
+    font-family: "微软雅黑";
+}
+.hotWordBox li h3 {
+    color: #cc0000;
+    font-weight: bold;
+    padding-right: 5px;
+  
+}
+.hotWordBox li h3 i {
+    width: 3px;
+    height: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #d02229;
+    overflow: hidden;
+}  
+.hotWordBox li h3 span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.hotWordBox li p {
+    padding-left: 8px;
+    width: 178px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.hotWordBox li p a {
+    float: left;
+    padding-right: 10px;
+    display: inline-block;
+    
+}
+.topTenBox {
+    width: 985px;
+    float: right;
+    height: 162px;
+}
+
+.topTenNavBox {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 12px;
+}
+.topTenNavBox h3 {
+    float: left;
+  
+}
+.topTenNavBox h3 i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 13px;
+    overflow: hidden;
+    
+    background: url(../img/newIndexIcon-24.png) no-repeat;
+    background-position: -38px 0;
+}   
+.topTenNavBox h3 span {
+    color: #d43d4e;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+} 
+.topTenNav {
+    float: right;
+    height: 32px;
+}
+.topTenNav .on {
+    color: #cc0000;
+    text-decoration: none;
+    height: 32px;
+    padding: 0 10px;
+    display: block;
+    float: left;
+}
+.topTenNav span {
+    float: left;
+    display: block;
+    color: #cccccc;
+}
+.topTenCon li {
+    float: left;
+    width: 190px;
+    margin-top: -10px;
+    padding-right: 7px;
+  
+    
+}
+.topTenCon{
+	height: 127px;
+	/*margin-left: 20px;*/
+}
+.comtitle .comicon3{
+	background-position: -61px -95px;
+}
+.comtitle .comicon4{
+	background-position: -94px -95px;
+}
+.comtitle .comicon5{
+	background-position: 0px -207px;
+}
+/*guanfnag推荐*/
+.contentThree{
+	position: relative;
+	margin-top: 10px;
+}
+.titieBox{
+	height: 43px;
+	/*background: red;*/
+}
+.titieBox ul{
+	/*height: 43px;*/
+	float: left;
+}
+.titieBox .on {
+    color: #dd102e;
+}
+.titieBox li {
+    float: left;
+    font-size: 16px;
+    width: 90px;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 微软雅黑;
+    overflow: hidden;
+    margin: 0;
+   
+    margin-right: 15px;
+}
+.titleSlider {
+    
+    height: 7px;
+    position: absolute;
+    left: 0;
+    width: 90px;
+    top: 34px;
+    text-align: center;
+    overflow: hidden;
+    border-bottom: 2px solid #dd102e;
+}
+.titleSlider b {
+    border-width: 10px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #dd102e;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    height: 0;
+    width: 0;
+    margin-top: -8px;
+    font-weight: bold;
+}
+.logoBox{
+	width: 1168px;
+	position: relative;
+   
+    height: 274px;
+    border: 1px solid #ededed;
+    background: #fff;
+    padding: 15px;
+    overflow: hidden;
+}
+.logoall{
+	position: relative;
+    height: 274px;
+}
+.logoFirst {
+    width: 1170px;
+    height: 274px;
+    overflow: hidden;
+}
+.logoFirstbd{
+	width: 10000px;
+	margin-left: 0px;
+}
+.logoFirstbd ul{
+	width: 1185px;
+	float: left;
+	position: relative;
+    margin-left: 0;
+}
+.logoFirstbd li{
+	float: left;
+    width: 180px;
+    height: 80px;
+    position: relative;
+    margin: 0 17px 17px 0;
+    overflow: hidden;
+}
+.logoFirstbd a img{
+	width: 280px;
+	height: 80px;
+	margin-left: 0px;
+	position: relative;
+	border: 0;
+}
+.logoBox .logoall{
+	display: none;
+}
+.logoBox .logoall1{
+	display: block;
+}
+/**/
+.ppjpd{
+	background: #fff;
+	margin-top: 10px;
+}
+.boxtit{
+    height: 40px;
+    line-height: 40px;
+    background: #f9f9f9;
+    padding: 0 3px;
+    margin: 0;
+}
+.jpTitle {
+    float: left;
+    padding-left: 2px;
+}
+.jpTitle i {
+    display: inline-block;
+    width: 7px;
+    height: 18px;
+    background: #ff9000;
+    overflow: hidden;
+    vertical-align: middle;
+     font-style: italic;
+}
+.jpTitle span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 17px;
+    color: #333;
+   
+    margin-left: 10px;
+}
+.rightNavBox {
+    float: right;
+    display: inline;
+    height: 9px;
+    margin-top: 20px;
+    font-size: 0;
+    line-height: 0;
+}
+.rightNavBox ul li.on {
+    background: #cc0000;
+}
+.rightNavBox ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+    height: 9px;
+    overflow: hidden;
+    
+    margin-left: 14px;
+    cursor: pointer;
+    float: left;
+    margin-top: 0;
+}
+.goodmenu{
+	border: 1px solid #ececec;
+    background: #fff;
+    padding: 4px 4px 0 4px;
+    margin: 0;
+}
+.goods_mnudl{
+    overflow: hidden;
+    zoom: 1;
+    width: 1190px;
+}
+.goods_mnudtit1{
+	background: url(../img/1.jpg) no-repeat center;
+	 width: 107px;
+}
+.goods_mnudtit2{
+	background: url(../img/2.jpg) no-repeat center;
+	 width: 107px;
+}
+.goods_mnudtit3{
+	background: url(../img/3.jpg) no-repeat center;
+	 width: 107px;
+}
+.goods_mnudtit4{
+	background: url(../img/4.jpg) no-repeat center;
+	 width: 107px;
+}
+.goods_mnudl dt{
+    float: left;
+    border-bottom: 4px solid #fff;
+    overflow: hidden;
+  	width: 107px;
+    height: 60px;
+}
+.goods_mnudd1{
+    padding: 5px 8px;
+    width: 463px;
+    height: 50px;
+}
+.goods_mnudl dd {
+    float: left;
+    /*padding: 15px 2px 15px 3px;*/
+    line-height: 25px;
+    /*height: 50px;*/
+    /*width: 394px;*/
+    color: #afafaf;
+    overflow: hidden;
+    border-bottom: 4px solid #fff;
+    position: relative;
+}
+.goodLinkbd {
+    position: relative;
+    margin-top: 0;
+}
+.goods_mnudl p {
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+   
+}
+..goods_mnudl dd p a {
+    background: #fff;
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
+    line-height: 25px;
+    padding: 0 8px;
+    color: #666;
+    text-decoration: none;
+    float: left;
+}
+/*footer*/
+.loadFifth{
+	height: 490px;
+	   
+}
+.footer {
+    width: 100%;
+    background: #f9f9f9;
+} 
+.footerTopBox {
+    width: 100%;
+    background: #333;
+}   
+.footerTop {
+   
+   
+    height: 84px;
+    border-bottom: 1px solid #494949;
+}
+.footerContact {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    font-family: 微软雅黑;
+    padding: 22px 0px;
+    margin: 0;
+}
+.footerContact i {
+    width: 40px;
+    height: 40px;
+   
+    margin-right: 18px;
+    display: inline-block;
+    float: left;
+    font-style: italic;
+    background: url(../img/public-24.png)no-repeat;
+    background-position: -144px -22px;
+}
+..footerContact b {
+    font-size: 24px;
+    color: #c00;
+    margin-right: 25px;
+    display: inline-block;
+        font-weight: bold;
+    float: left;
+}
+
+
+.footerContact span {
+    font-size: 14px;
+    color: #fff;
+    margin-right: 8px;
+    display: inline-block;
+    float: left;
+}
+.footerTop .footerTopRight {
+    float: right;
+    height: 32px;
+    padding: 26px 0;
+    margin: 0;
+}
+.footerTopRight .ftRight-tit {
+    float: left;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    font-family: 微软雅黑;
+    padding-right: 10px;
+    padding: 0;
+    margin: 0;
+}
+.footerTopRight .ftRight-form {
+    float: left;
+    width: 240px;
+    height: 30px;
+    border: 1px solid #494949;
+    position: relative;
+  
+}
+.footerTopRight .ftRight-form input {
+    width: 190px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    background: 0;
+    border: 0;
+    float: left;
+    color: #fff;
+    outline: 0;
+    vertical-align: middle;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+   font: 400 13.3333px Arial;
+}
+.footerTopRight .ftRight-form span {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+    position: absolute;
+    left: 6px;
+    top: 0;
+}
+.footerTopRight .ftRight-form i {
+    display: inline-block;
+    width: 22px;
+    height: 18px;
+   
+    margin: 6px 0 0 10px;
+    cursor: pointer;
+    float: left;
+    background: url(../img/public-24.png) no-repeat;
+     background-position: -133px 0;
+}
+.footerServices {
+  
+    
+    overflow: hidden;
+    padding: 30px 0 60px;
+}
+.footerServices ul li {
+    width: 158px;
+    float: left;
+    display: inline;
+    margin-right: 15px;
+}
+.footerServices ul li h3 {
+    font-weight: normal;
+    height: 26px;
+    line-height: 26px;
+    padding: 5px 0;
+}
+.footerServices ul li h3 i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 9px;
+    float: left;
+    
+    background: url(../img/public-24.png)no-repeat;
+    background-position: 0 -131px;
+}
+.footerServices ul li h3 span {
+    display: inline-block;
+    width: 123px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    font-family: 微软雅黑;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.footerServices ul li p {
+    width: 123px;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 35px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.jxMicroblogging .item {
+    width: 130px;
+    height: 28px;
+    line-height: 28px;
+    padding: 5px 0 13px;
+    position: relative;
+}
+.jxMicroblogging .item a {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-family: 微软雅黑;
+    float: left;
+}
+
+.jxMicroblogging .item i {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 9px;
+    float: left;
+    cursor: pointer;
+    
+    background: url(../img/public-24.png)no-repeat;
+    background-position: -140px -74px;
+}
+.jxMicroblogging .weixin i {
+    background-position: -103px -74px;
+}
+.jxMicroblogging .weixin .weixinCode {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    left: 37px;
+    top: 35px;
+    display: none;
+}
+ul.clearfix li img {
+    position: relative;
+    border: 0;
+}
+.jxMicroblogging .weixin:hover .weixinCode{
+	display: block;
+}
+.footerBotBox {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.footerBot {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+}
+.footerBotLeft {
+    float: left;
+    width: 760px;
+    overflow: hidden;
+}
+.footerBotLeft .footerInfo {
+    height: 16px;
+    padding: 4px 0;
+    overflow: hidden;
+    position: relative;
+    left: -8px;
+    margin-left: 0;
+}
+.footerBotLeft p {
+    line-height: 20px;
+    text-align: left;
+}
+.footerBotLeft .footerInfo a {
+    display: inline-table;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 8px;
+    overflow: hidden;
+    position: relative;
+}
+.footerBotLeft .friendLink {
+    padding: 17px 0 3px 0;
+    color: #999;
+    height: 20px;
+    width: 740px;
+  
+}
+.footerBotLeft .friendLink span {
+    display: inline-block;
+    float: left;
+    height: 20px;
+    max-width: 700px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    left: -5px;
+}
+.footerBotLeft .friendLink a {
+    color: #999;
+    margin: 0 5px;
+}
+.footerBotLeft p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+.footerBotLeft .copybot {
+    height: 47px;
+}
+.footerBotLeft .copybot a {
+    display: inline-table;
+    margin-right: 5px;
+}
+.footerBotLeft .footerPro {
+    color: #cc0000;
+    
+}
+.footerBotCode {
+    width: 240px;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+.footerBotCode div {
+    float: left;
+    width: 80px;
+    display: inline;
+    margin-left: 40px;
+}
+.footerBotCode div .codePic {
+    width: 80px;
+    height: 80px;
+}
+.footerBotCode div img {
+    width: 80px;
+    height: 80px;
+    border: 0;
+}
+.footerBotCode div .codeText {
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 5px;
+}
+.footerBotCode div .codePic {
+    width: 80px;
+    height: 80px;
 }
