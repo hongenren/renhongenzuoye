@@ -993,6 +993,7 @@ header{
     background: #fff;
    
 }
+
 .indexTabNewNav li{
 	font-size: 16px;
     font-family: 微软雅黑;
@@ -1832,7 +1833,7 @@ header{
 }
 /*footer*/
 .loadFifth{
-	height: 490px;
+	height: 540px;
 	   
 }
 .footer {
@@ -2141,4 +2142,171 @@ ul.clearfix li img {
 .footerBotCode div .codePic {
     width: 80px;
     height: 80px;
+}
+/*左侧楼梯*/
+.fixDiv {
+    top: 57.5px;
+    left: 50%;
+    transform: scaleY(1);
+    margin-left: -650px;
+    position: fixed;
+    width: 40px;
+    height: 205px;  
+    /*background: red;*/  
+}
+.hua:hover .floorBg,.fixDiv div.hover .floorBg{
+	display: none;
+}
+
+.fixDiv .floorOne {
+	width: 30px;
+	height: 30px;
+	/*background: blue;*/
+    top: 0;
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.floorTwo,.floorThree,.floorFour,.floorFive{
+	width: 30px;
+	height: 30px;
+	/*background: blue;*/
+    top: 0;
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.fixDiv .floorOneOn {
+    background: #d43d4e;
+ 
+}
+
+
+.fixDiv a {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-family: 微软雅黑;
+    border-radius: 30px;
+    text-decoration: none;
+    overflow: hidden;
+}
+.fixDiv .floorBg {
+    background: #f1f1f1;
+  
+}
+.fixDiv .floorOneBg i {
+    width: 12px;
+    height: 20px;
+    
+    position: absolute;
+    left: 9px;
+    top: 5px;
+    background: url(../img/newIndexIcon-24.png)no-repeat;
+    background-position: 0 -181px;
+}
+.floorTwoOn {
+    background: #c2782f;
+    
+ 
+}
+.fixDiv{
+	display: none;
+}
+.fixDiv .floorTwoBg i {
+    width: 8px;
+    height: 21px;
+    background: url(../img/newIndexIcon-24.png)no-repeat;
+    background-position: -18px -180px;
+    position: absolute;
+    left: 11px;
+    top: 5px;
+}
+.floorTwo {
+    top: 31px;
+}
+.floorThree {
+    top: 62px;
+}
+.fixDiv .floorFour {
+    top: 93px;
+}
+.floorFive {
+    top: 124px;
+}
+.floorThreeOn {
+    background: #296693;
+  
+}
+.fixDiv .floorFourOn {
+    background: #6c9d0e;
+}
+.fixDiv .floorFiveOn {
+    background: #fe7a65;
+}    
+.fixDiv .floorThreeBg i {
+    width: 20px;
+    height: 20px;
+    background: url(../img/newIndexIcon-24.png)no-repeat; 
+    background-position: -31px -181px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+.floorFour,.floorFive{
+	width: 30px;
+	height: 30px;
+	/*background: red;*/
+}
+.floorFourBg i {
+    width: 12px;
+    height: 19px;
+    background: url(../img/newIndexIcon-24.png)no-repeat; 
+    background-position: -56px -180px;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+}
+.fixDiv .floorFiveBg i {
+    width: 15px;
+    height: 16px;
+    background: url(../img/newIndexIcon-24.png)no-repeat; 
+    background-position: -39px -213px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+}
+.fixDiv .floorBack {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    top: 155px;
+    background: #f1f1f1;
+}
+.floorBack i {
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    background: url(../img/newIndexIcon-24.png)no-repeat; 
+    background-position: -74px -190px;
 }

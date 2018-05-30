@@ -182,6 +182,7 @@ table { border-collapse:collapse; border-spacing:0; }
 	position: relative;
 	margin-bottom: 30px;
 }
+
 .zhuce-sj b{
 	width: 30px;
 	height: 30px;
@@ -199,10 +200,21 @@ table { border-collapse:collapse; border-spacing:0; }
 .dier i{
 	width: 80px;
 	height: 40px;
-	border:1px solid #000000;
+	text-shadow: 5px 5px 5px #888888;
+	color:blue;
 	position: absolute;
 	top: 0;
 	left: 480px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 30px;
+	z-index: 1;
+	cursor: pointer;
+	
+}
+.dier .yzmcu{
+	color: red;
+	display: none;
 }
 .xym b{
 	background: url(../img/regLogin-8.png)no-repeat top left;
@@ -247,17 +259,22 @@ table { border-collapse:collapse; border-spacing:0; }
 	margin-top: 30px;
 	margin-left: 240px;
 }
+.ljzc #submit_btn{
+	background: #e10303;
+	border: none;
+	color: #F1F1F1;
+}
 .main-zhuce input{
 	border: 1px solid #CCCCCC;
 }
 /*结束*/
 .footer-warp{
-	background: #CECECE;
+	/*background: #CECECE;*/
 	margin-top: 20px;
 }
 footer{
 	height: 100px;
-	padding-top: 150px;
+	padding-top: 100px;
 	
 }
 footer p{

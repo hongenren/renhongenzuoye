@@ -1,0 +1,53 @@
+body{
+	background: #ECECEC;
+}
+
+.shangpin ul{
+	width: 1100px;
+	height: 350px;
+	margin: 0 auto;
+	/*background: red;*/
+	
+	
+}
+.shangpin ul li{
+	float: left;
+	margin: 30px;
+	height: 300px;
+	width: 180px;
+	border: 1px solid #296693;
+	padding: 10px;
+	
+}
+.shangpin li div p{
+	height: 160px;
+	width: 170px;
+	/*background: pink;*/
+}
+.shangpin li div img{
+	display: block;
+}
+.shangpin ul b{
+	margin-top: 10px;
+	display: block;
+	font-size: 20px;
+	
+}
+.shangpin ul h3{
+	display: block;
+
+}
+.shangpin ul h3{
+	font-size: 20px;
+	margin: 15px 0;
+}
+.shangpin ul em{
+	display: block;
+	background: red;
+	height: 32px;
+	font-size: 20px;
+	
+}
+.shangpin ul em a{
+	color: #fff;
+}

@@ -1,0 +1,20 @@
+
+
+
+.catbox{
+	
+	display: none;
+}
+.nav-right:hover .catbox{
+	display: block;
+}
+.bann{
+	margin: 0 auto;
+	background: url(../img/4bed8ed42acf4ed2ba67f6d3e612a674.jpg)no-repeat center;
+	height: 90px;
+	/*margin-top: -110px;*/
+}
+.xiangqing{
+	background: red;
+	height: 100px;
+}

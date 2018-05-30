@@ -7,7 +7,10 @@
 
 		</style>
 	</head>
-	<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/base.css"/>
+	<script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+		
+	
 	<body>
 		<!--头部-->
 		<div class="top-header">
@@ -36,7 +39,7 @@
 			<div class="top-zc">
 				欢迎来到酒仙网！
 				<!--<a href="">免费注册</a>-->
-				<a href="">请登录</a>
+				<a href="html/dl.html">请登录</a>
 			</div>
 			</div>
 		</div>
@@ -50,13 +53,13 @@
 		</div>
 		<form action="" method="post">
 			<div class="main-zhuce">
-				<div class="zhuce-sj">
+				<div class="zhuce-sj zhuce-sjh">
 					<p><span>
 						手机号
 					</span></p>
-					<input type="text" name="" id="" value="" />
-					<span>请输入11位手机好号码</span>
-					<span>请输入正确的手机好号码</span>
+					<input type="text" name="username" id="sjh" value="" />
+					<span class="hm1"></span>
+					<span class="hm2"></span>
 					<b></b>
 				</div>
 				
@@ -64,9 +67,9 @@
 					<p><span>
 						验证码
 					</span></p>
-					<input type="text" name="" id="" value="" />
-					<span>请输入验证码</span>
-				<!--	<span>请输入正确的手机好号码</span>-->
+					<input type="text" name="" id="yzm" value="" />
+					<span class="yzmcu"></span>
+					<span></span>
 					<b></b>
 					<i></i>
 				</div>
@@ -75,9 +78,9 @@
 					<p><span>
 						校证码
 					</span></p>
-					<input type="text" name="" id="" value="" />
-					<strong>获取短信验证码</strong>
-					<span>请输入校证码</span>
+					<input type="text" name="xym" id="" value="" />
+					<span>再次输入验证码</span>
+					<span></span>
 				<!--	<span>请输入正确的手机好号码</span>-->
 					<b></b>
 					<i></i>
@@ -87,22 +90,22 @@
 					<p><span>
 						设置密码
 					</span></p>
-					<input type="text" name="" id="" value="" />
+					<input type="text" name="password" id="szmm" value="" />
 					<!--<strong>获取短信验证码</strong>-->
-					<span>请输入密码</span>
-					<span>请输入数字字母最少8位数</span>
+					<span></span>
+					<span></span>
 					<b></b>
 					<i></i>
 				</div>
 				
-					<div class="zhuce-sj szmm">
-					<p><span>
-						确认密码
-					</span></p>
-					<input type="text" name="" id="" value="" />
+					<div class="zhuce-sj szmm qrmm">
+					<p>
+						<span>确认密码</span>
+					</p>
+					<input type="password" name="" id="qrmm" value="" />
 					<!--<strong>获取短信验证码</strong>-->
-					<span>密码长度8-20位</span>
-					<span>两次密码不一致</span>
+					<span></span>
+					<span></span>
 					<b></b>
 					<i></i>
 				</div>
@@ -110,7 +113,10 @@
 					<input type="checkbox" checked="checked"  value="" />
 					<a href="">我已阅读并同意<span>《酒仙网用户注册协议》</span></a>
 				</div>
-				<div class="ljzc">立即注册</div>
+				<div class="ljzc">
+					
+					<button id="submit_btn">立 即 注 册</button>
+				</div>
 			</div>
 		</form>
 		</div>
@@ -122,4 +128,162 @@
 		</footer>
 		</div>
 	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('input').eq(0).focus(function(){
+				
+		if($(this).val().length==0){
+			$(this).next("span").text("支持中文，字母，数字，'-'，'_'的多种组合");
+		}
+	})
+		$('input').eq(1).focus(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("验证码输入错误");
+		}
+	})	
+	$('input').eq(2).focus(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("俩次验证码不一样");
+		}
+	})	
+	$('input').eq(3).focus(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("建议使用字母、数字和符号两种以上的组合，6-20个字符");
+		}
+	})	
+	$('input').eq(4).focus(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("请再次输入密码");
+		}
+	})
+	//input各种判断
+	//用户名：
+	$("input").eq(0).blur(function(){
+		
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		}else if($(this).val().length>0 && $(this).val().length<4){
+			$(this).next("span").text("长度只能在4-20个字符之间");
+			$(this).next("span").css("color","red");
+		}else{
+			$(this).next("span").text("");
+		}
+		
+	})
+		
+// 	验证码
+//	 验证码刷新			
+function cod(){
+		var str="qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPLKJHGFDSAZXCVBNM";
+		var str1=0;
+		for(var i=0; i<4;i++){
+			str1+=str.charAt(Math.floor(Math.random()*62)) 
+		}
+		str1=str1.substring(1)
+		$(".dier i").text(str1);
+	}
+	cod();
+	$(".dier i").click(cod);	
+//	验证码验证
+		$("input").eq(1).blur(function(){
+			var $yzmval=$(".dier #yzm").val()
+//			console.log($(".dier i").text())
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		}else if($yzmval.toUpperCase()!=$(".dier i").text().toUpperCase()){
+//			console.log("aa")
+			$(".dier span").show()	
+			$(this).next("span").css("color","red");
+		}else{
+			$(".dier .yzmcu").hide()	
+		}
+		
+	})
+//确认验证码
+	$('input').eq(2).blur(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		}else if($(this).val().toUpperCase()!=$('input').eq(1).val().toUpperCase()){
+			$(this).next("span").text("两次密码不匹配");
+			$(this).next("span").css("color",'red');
+		}else{
+			$(this).next("span").text("");
+		}		
+	})
+	//设置密码
+	$('input').eq(3).blur(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		}else if($(this).val().length>0 && $(this).val().length<6){
+			$(this).next("span").text("长度只能在6-20个字符之间");
+			$(this).next("span").css("color",'red');
+		}else{
+			$(this).next("span").text("");
+		}		
+	})
+//yanzhengmima
+	$('input').eq(4).blur(function(){
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		}else if($(this).val()!=$('input').eq(3).val()){
+			$(this).next("span").text("两次密码不匹配");
+			$(this).next("span").css("color",'red');
+		}else{
+			$(this).next("span").text("");
+		}		
+	})
+	 $(".ljzc").click(function(e){
+	 	
+	 	var $sjhval=$(".zhuce-sjh input").val()
+
+	 	var $mmval=$("input").eq(3).val();
+	 			console.log($mmval)
+	 		
+			$.post("http://h6.duchengjiu.top/shop/api_user.php",{
+							status:"register",
+							username:$sjhval,
+							password:$mmval
+							},function code(data){
+								if(data.code!=0){
+									alert(data.message)
+								}else{	
+									alert("注册成功")
+								location.assign("html/dl.html")
+								}
+							})
+	 	
+	 	for(var j=0;j<5;j++){
+	 		if($("input").eq(j).val().length==0){
+	 			$("input").eq(j).focus();
+	 			if(j==4){
+	 				$("input").eq(j).next().next("span").text("此处不能为空");
+	 				$("input").eq(j).next().next("span").css("color",'red');
+	 				e.preventDefault();
+	 				return;
+	 			}
+	 			$('input').eq(j).next("span").text("此处不能为空");
+				$('input').eq(j).next("span").css("color",'red');	
+				e.preventDefault();
+				return;
+	 		
+	 		}
+	 	}
+	 	//注册跳转到登录页面
+	 	
+	 	return false;					
+	 				
+	 })
+	
+
+
+	
+	
+
+		})
+	</script>
 </html>

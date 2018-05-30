@@ -58,6 +58,10 @@
 .denglu-sj{
 	position: relative;
 	margin: 20px 0;
+	height: 60px;
+}
+.yzm .yzmcu{
+	display: none;
 }
 .denglu-sj input{
 	width: 270px;
@@ -92,7 +96,22 @@
 	background-position-x: -415px;
 	background-position-y: 10px;
 }
-.yzm span:last-child{
+.yzm .i{
+	width: 80px;
+	height: 40px;
+	text-shadow: 5px 5px 5px #888888;
+	color:blue;
+	position: absolute;
+	top: 0;
+	left: 180px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 25px;
+	z-index: 1;
+	cursor: pointer;
+	
+}
+/*.yzm span:last-child{
 	width: 80px;
 	height: 38px;
 	display: inline-block;
@@ -100,7 +119,7 @@
 	position: absolute;
 	left: 190px;
 	top: 0;
-}
+}*/
 .denglu input{
 	border: 0;
 	background: #e10303;

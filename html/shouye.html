@@ -20,8 +20,8 @@
 			<header>
 				<div class="header-left">
 					<span>欢迎来酒仙网！</span>
-					<a href="">请登录</a>
-					<a href="">免费注册</a>
+					<a href="dl.html">请登录</a>
+					<a href="../index.html">免费注册</a>
 				</div>
 				<div class="header-right">
 					<ul>
@@ -512,6 +512,76 @@
 				<!--两侧背景图 -->
 				<div class="bgleft"><a href=""></a></div>
 				<div class="bgright"><a href=""></a></div>
+				<!--左侧楼梯-->
+				<div class="fixDiv">
+					<div class="floorOne hua">
+						<a class="floorOneOn"href="javascript:;">白酒馆</a>
+						<a class="floorOneBg floorBg" href="javascript:;" >
+							<i class="newIndexIcon"></i>
+						</a>
+					</div>
+					<div class="floorTwo hua">
+						<a class="floorTwoOn" href="javascript:;" >葡萄酒馆</a>
+						<a class="floorTwoBg floorBg" href="javascript:;">
+							<i class="newIndexIcon"></i>
+						</a>
+					</div>
+					<div class="floorThree hua">
+						<a class="floorThreeOn" href="javascript:;" >洋酒馆</a>
+						<a class="floorThreeBg floorBg" href="javascript:;" >
+							<i class="newIndexIcon"></i>
+						</a>
+					</div>
+					<div class="floorFour hua">
+						<a class="floorFourOn" href="javascript:;" >养生酒馆</a>
+						<a class="floorFourBg floorBg" href="javascript:;">
+							<i class="newIndexIcon"></i>
+						</a>
+					</div>
+					<div class="floorFive hua">
+						<a class="floorFiveOn" href="javascript:;">食品</a>
+						<a class="floorFiveBg floorBg" href="javascript:;">
+							<i class="newIndexIcon"></i>
+						</a>
+					</div>
+					<span class="floorBack"><i class="newIndexIcon"></i></span>
+				</div>
+				<script type="text/javascript">
+					$(function(){
+						var $navLi = $(".hua");
+						var $conLi = $(".whitewine");
+						var flag=true;
+						$(window).scroll(function(){
+							if(flag){
+								var scrollTop=$(this).scrollTop();
+								if(scrollTop>600){
+									$(".fixDiv").fadeIn();
+								}else{
+									$(".fixDiv").fadeOut();
+								}
+								$conLi.each(function(index){
+									if(scrollTop>$(this).offset().top-$(this).outerHeight()/2){
+										$navLi.eq(index).addClass("hover").siblings().removeClass("hover")
+									}
+								})
+							}
+						})
+						$(".fixDiv .hua").click(function(){
+							flag=false;
+							var index=$(this).index();
+							$(this).addClass("hover").siblings().removeClass("hover");
+							$("body,html").animate({"scrollTop":$conLi.eq(index).offset().top},function(){
+								flag=true;
+							})
+							
+						})
+						$(".fixDiv .floorBack").click(function(){
+							$("body,html").animate({"scrollTop":0});
+						})
+					})
+					
+					
+				</script>
 				<!---->
 				<div class="connectfirst">
 					<div class="connectleft">
@@ -5028,14 +5098,14 @@
 							<p class="copybot">
 								<span>
 									<a href="">
-										<img src="../img/index.pngd"/>
+										<img src="../img/index.png"/>
 									</a>
 								</span>
 								<a href="">
-									<img src="../img/index.pngd"/>
+									<img src="../img/index.png"/>
 								</a>
 								<a href="">
-									<img src="../img/index.pngd"/>
+										<img src="../img/index.png"/>
 								</a>
 							</p>
 							<p class="footerPro" style="padding:11px 0 6px;">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
@@ -5049,6 +5119,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</body>
 <script type="text/javascript">
 	var atxt=document.getElementsByClassName("seach-fm")[0];
