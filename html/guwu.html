@@ -3,7 +3,233 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="../dist/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../dist/css/guwu.css"/>
+		<script src="../css/common.js" type="text/javascript"></script>
+			
+		
+		<script src="../js/jquery-1.11.0.js" type="text/javascript">	</script>
+			
+	
 	</head>
 	<body>
+		<div class="header-warp">
+			<header>
+				<div class="header-left">
+					<span>欢迎来酒仙网！</span>
+					<a href="dl.html">请登录</a>
+					<a href="../index.html">免费注册</a>
+				</div>
+				<div class="header-right">
+					<ul>
+						<li class="xsj"><a href="shouye.html">我的酒仙</a>
+							<span></span>
+							<ul class="wdjx">
+								<li><a href="xiangqing.html">我的订单</a></li>
+								<li><a href="liebiao.html">物流跟踪</a></li>
+								<li><a href="shouye.html">我的优惠券</a></li>
+							</ul>
+						</li>
+						<li  class="ceoyx"><a href="liebiao.html">CEO邮箱</a></li>
+						<li class="gwcjs">
+							<span></span>
+							<a href="guwu.html">购物车
+								<mark>0</mark>件</a></li>
+						<li class="huiyuan"><span>CLUB会员</span></li>
+						<li class="zsrz">|<a href="xiangqing.html">招商入驻</a>|
+					
+						</li>
+						<li class="sjgjx">
+							<span></span>
+							<a href="xiangqing.html">手机逛酒仙</a>
+							<p></p>	
+						</li>
+								
+						<li class="wzdh">
+							<span></span>
+							<a href="liebiao.html">网站导航</a>
+							<span class="xil"></span>
+							<div class="gw-warp">
+								<div class="wzdh-gw">
+									<h3>购物</h3>
+									<ul>
+										<li><a href="">白酒</a></li>
+										<li><a href="">葡萄酒</a></li>
+										<li><a href="">洋酒</a></li>
+										<li><a href="">啤酒</a></li>
+										<li><a href="">保健酒</a></li>
+										<li><a href="">黄酒</a></li>
+									</ul>
+								</div>
+								
+								<div class="wzdh-gw yanse">
+									<h3>活动</h3>
+									<ul>
+										<li>白酒</li>
+										<li>葡萄酒</li>
+										<li>洋酒</li>
+										<li>啤酒</li>
+										<li>保健酒</li>
+										<li>黄酒</li>
+									</ul>
+								</div>
+								
+								<div class="wzdh-gw">
+									<h3>其他</h3>
+									<ul>
+										<li><a href="">清仓</a></li>
+										<li>葡萄酒</li>
+										<li>洋酒</li>
+										<li>啤酒</li>
+										<li>保健酒</li>
+										<li>黄酒</li>
+									</ul>
+								</div>
+								<p>咨询热线400-617-999</p>
+								
+							</div>
+						</li>
+						<li class="khfu">
+							<span></span>
+							<a href="">客户服务</a>
+							<span class="khfu-xsj"></span>
+							<ul class="wdjx">
+								<li><a href="">我的订单</a></li>
+								<li><a href="">物流跟踪</a></li>
+								<li><a href="">我的优惠券</a></li>
+							</ul>
+						</li>
+						<li class="kfrx">
+							<span>
+							客服热线
+							</span>
+							<b>
+							400-617-999
+							</b>
+						</li>
+					</ul>
+				</div>
+			</header>
+		</div>
+		<div class="main-wrap">
+		 	<div class="main">
+		 		<div class="card-title">
+		 			<h1>购物车</h1>
+		 		</div>
+		 		<div class="card-step">
+		 			<ul>
+		 				<li class="card-step-item1"><span>1</span>购物车</li>
+		 				<li class="card-step-item2"><span>2</span>填写和提交订单信息</li>
+		 				<li class="card-step-item3"><span>3</span>成功提交订单</li>
+		 			</ul>
+		 		</div>
+		 		<div class="card-container">
+		 			<div class="card-container-title">
+		 				<h2>已选择的商品</h2>
+		 			</div>
+		 			<div class="card-container-list">
+		 				<ul>
+		 					<li class="card-item-list"><input type="checkbox" id="items-check-all">全选</li>
+		 					<li class="card-item-list-sp">商品</li>
+		 					<li class="card-item-list">销售价</li>
+		 					<li class="card-item-list">数量</li>
+		 					<li class="card-item-list">优金额</li>
+		 					<li class="card-item-list">积分</li>
+		 					<li class="card-item-list">小计</li>
+		 					<li class="card-item-list-cz">操作</li>
+		 				</ul>
+		 				<div class="card-goods">
+	
+		 		
+		 			</div>	
+		 				
+		 				
+		 			</div>
+		 		</div>
+		 	</div>
+		 </div>
 	</body>
+	<script type="text/javascript">
+	$(function(){
+		
+		
+		if(getCookie("cat")==undefined){
+			$(".card-goods").html("<a href='liebiao.html'>暂时没有任何商品</a>")
+		}else{
+			var obj=JSON.parse(getCookie("cat"));
+		}
+//		console.log(obj)
+		$.get("http://h6.duchengjiu.top/shop/api_goods.php",{"cat_id":"45"},function(data){
+			var data=data.data;
+//			console.log(data)
+			for(var attr in obj){
+				for(var j=0;j<data.length;j++){
+					if(attr==data[j].goods_id){
+						
+					
+			
+				$(".card-goods")[0].innerHTML +=`<ul class="card-item">
+		 					<li class="card-item-list">
+		 						<input class="card-input" type="checkbox" checked="checked"  value="1">
+		 					</li>
+		 					<li>
+		 						<div class="card-pic">
+		 							<a href="#"><img src="${data[j]['goods_thumb']}"/></a>
+		 						</div>
+		 					</li>
+		 					<li class="card-item-list">
+		 						<div class="card-info">
+		 							<a href="#">
+		 								${data[j].goods_name}	
+		 							</a>
+		 						</div>
+		 					</li>
+		 					<li class="card-item-list">
+		 						￥<span class = "price">${data[j].price}</span>
+		 					</li>
+		 					<li class="card-item-list">
+		 						<div class="prouduct-sort-show-buy">
+		 							<span class="p-quantity">
+            							<a href="javascript:void(0);" class="btn-decrease">-</a>
+            							<input type="text" size="2" name="goods[num]" class="action-quantity-input" value="1">
+            							<a href="javascript:void(0);" class="btn-increase">+</a>
+            					</div>		
+		 					</li>
+		 					<li class="card-item-list">
+		 						0.00
+		 					</li>
+		 					<li class="card-item-list">
+		 						-
+		 					</li>
+		 					<li class="card-item-list">
+		 						￥<span class = "sum-price">${data[j].price}</span>
+		 					</li>
+		 					<li class="card-item-list-action">
+		 						<span><a href="javascript:void(0)">收藏&nbsp;</a>|</span>
+		 						<span><a href="javascript:void(0)" data-id="${data[j].goods_id}" class="btn-del">移除</a></span>
+		 					</li>
+		 				</ul>`
+					}
+				}
+			}
+		$(".btn-del").click(function(){
+			var preid=this.getAttribute("data-id");
+			delete obj[preid];
+			
+			$(".card-item").remove()
+			setCookie("cat",JSON.stringify(obj),7)
+		})
+	
+		$(".btn-increase").click(function(){
+			if(getCookie("cat")==undefined){
+				var obj={};
+			}else{
+				var obj=JSON.parse(getCookie("cat"))
+			}
+			console.log(obj)
+		})
+//----------------------------------------------------			
+		})
+	})	
+	</script>
 </html>

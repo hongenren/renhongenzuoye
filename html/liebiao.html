@@ -22,7 +22,7 @@
 				</div>
 				<div class="header-right">
 					<ul>
-						<li class="xsj"><a href="">我的酒仙</a>
+						<li class="xsj"><a href="shouye.html">我的酒仙</a>
 							<span></span>
 							<ul class="wdjx">
 								<li><a href="">我的订单</a></li>
@@ -33,7 +33,7 @@
 						<li  class="ceoyx"><a href="">CEO邮箱</a></li>
 						<li class="gwcjs">
 							<span></span>
-							<a href="">购物车
+							<a href="guwu.html">购物车
 								<mark>0</mark>件</a></li>
 						<li class="huiyuan"><span>CLUB会员</span></li>
 						<li class="zsrz">|<a href="">招商入驻</a>|
@@ -327,14 +327,14 @@
 		<div class="spwarp">
 			<div class="shangpin">
 				<ul class="jiaru">
-					<li>
+					<!--<li>
 						<div class="">
 							<p><a href=""><img src="../img/51aec6e2802b4bdfa61a163a7d650cf72.jpg"/></a></p>
 							<b>浓香特卖</b>
 							<h3>￥<span>376</span></h3>
 							<em><a href="">立即抢购</a></em>
 						</div>
-					</li>
+					</li>-->
 				</ul>
 			</div>
 		</div>
@@ -342,32 +342,26 @@
 	<script type="text/javascript">
 		$(function(){
 			$.get("http://h6.duchengjiu.top/shop/api_goods.php",{"cat_id":"45"},function(data){
-				
-				var str="";
+			
 				var data=data.data
 				console.log(data)
 			for(var i=0;i<data.length;i++){
 				
-//				$(".jiaru")[0].innerHTML +=`<li>
-//						<div class="">
-//							<p><a href=""><img src="${data[i].goods_thumb}"/></a></p>
-//							<b>${data[i].goods_desc}</b>
-//							<h3>￥<span>${data[i].price}</span></h3>
-//							<em><a href="">立即抢购</a></em>
-//						</div>
-//					  </li>`
-					
 				$(".jiaru")[0].innerHTML +=`<li>
 						<div class="">
-							<p><a href=""><img src="${data[i]['goods_thumb']}"/></a></p>
-							<b>浓香特卖</b>
-							<h3>￥<span>376</span></h3>
-							<em><a href="">立即抢购</a></em>
+							<p>
+							<a href='xiangqing.html?id=${data[i].goods_id}'>
+							<img src="${data[i]['goods_thumb']}"/>
+							</a>
+							</p>
+							<b>${data[i].goods_name}</b>
+							<h3>￥<span>${data[i].price}</span></h3>
+							<em><a href="#">立即抢购</a></em>
 						</div>
 					</li>`
 				
 				}
-//			$(".jiaru").text(str)
+
 			})
 			
 		

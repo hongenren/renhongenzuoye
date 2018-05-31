@@ -4,7 +4,7 @@ body{
 
 .shangpin ul{
 	width: 1100px;
-	height: 350px;
+	/*height: 950px;*/
 	margin: 0 auto;
 	/*background: red;*/
 	
@@ -13,11 +13,11 @@ body{
 .shangpin ul li{
 	float: left;
 	margin: 30px;
-	height: 300px;
+	height: 400px;
 	width: 180px;
 	border: 1px solid #296693;
 	padding: 10px;
-	
+	position: relative;
 }
 .shangpin li div p{
 	height: 160px;
@@ -25,6 +25,8 @@ body{
 	/*background: pink;*/
 }
 .shangpin li div img{
+	height: 160px;
+	width: 170px;
 	display: block;
 }
 .shangpin ul b{
@@ -40,6 +42,8 @@ body{
 .shangpin ul h3{
 	font-size: 20px;
 	margin: 15px 0;
+	position: absolute;
+	bottom: 60px;
 }
 .shangpin ul em{
 	display: block;
@@ -48,6 +52,15 @@ body{
 	font-size: 20px;
 	
 }
+.shangpin ul em{
+	
+	cursor: pointer;
+	position: absolute;
+	bottom: 30px;
+}
 .shangpin ul em a{
 	color: #fff;
+}
+.seach-warp{
+	background: #fff;
 }
