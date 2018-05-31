@@ -513,10 +513,11 @@
 					$(".xiangqing")[0].innerHTML=`<div class="xqleft">
 					<div class="show-pic">
 						<img src="${data[i]['goods_thumb']}"/>
-						<div id="">
+						<div id="fdj">
 							
 						</div>
 					</div>
+					
 					<div class="show-list">
 						<a href="" class="show-list-prev"><i></i></a>
 						<div class="show-list-con">
@@ -531,6 +532,10 @@
 							</ul>
 						</div>
 						<a href="" class="show-list-next"><i></i></a>
+						
+					</div>
+					<div class="zoomdiv">
+						<img class="imge" src="${data[i]['goods_thumb']}"/>
 					</div>
 					<div class="show-other">
 						
@@ -597,20 +602,75 @@
 				}else{
 					var obj = {};
 				}
-//				var obj[productid]+=obj[productid]
-				obj[productid] += Number($("._nub").text());
-				console.log(obj[productid])
+				if(obj[productid]==undefined){
+					obj[productid]=Number($("._nub").text());
+				}else{
+					obj[productid] += Number($("._nub").text());
+				}
+//				console.log(obj)
+////				var obj[productid]+=obj[productid]
+//				obj[productid] += Number($("._nub").text());
+				//console.log(obj[productid])
 				$(".gwcjs mark").text(obj[productid]);
 				setCookie("cat",JSON.stringify(obj),7);
 			
-				
-				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 			})
 			 
 			 
-			 
-			 
-			 
+			 $(".show-pic").mouseover(function(){
+//				console.log("aa")
+				$("#fdj").css({'display':'block'})
+				$(".zoomdiv").css({'display':'block'})
+				
+				$(document).mousemove(function(e){
+				var evt = e||event;
+				var _left=evt.pageX-$(".show-pic").offset().left;
+				var _top=evt.pageY-$(".show-pic").offset().top;
+				console.log(_left,_top)
+//				if(_left<=0){
+//					_left=0;
+//				}
+//				if(_top<=0){
+//					_top = 0;
+//				}
+//				if(_left>=$(".show-pic").outerWidth()){
+//					_left=$(".show-pic").outerWidth()
+//				}
+//				if(_top>=$(".show-pic").outerHeight()-$("#fdj").outerHeight()){
+//					_top>=$(".show-pic").outerHeight()-$("#fdj").outerHeight()
+//				}
+				$("#fdj")[0].style.left = _left+"px";
+				$("#fdj")[0].style.top = _top+"px";
+
+//				$("#fdj").css('left',_left+"px")
+//				$("#fdj").css('top',_top+"px")
+			
+				
+				$(".zoomdiv img").css('left',-$("#fdj").offset()
+				.left/$(".show-pic").outerWidth()*$(".zoomdiv img").outerWidth()+"px");
+				$(".zoomdiv img").css('top',-$("#fdj").offset()
+				.top/$(".show-pic").outerHeight()*$(".zoomdiv img").outerHeight()+"px");
+				
+			})
+			})
+			$(".show-pic").mouseout(function(){
+				console.log("aa")
+				$("#fdj").css({'display':'none'})
+				$(".zoomdiv").css({'display':'none'})
+			}) 
+			
 			 
 			 
 			 

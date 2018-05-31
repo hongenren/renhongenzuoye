@@ -155,9 +155,18 @@
 		
 		if(getCookie("cat")==undefined){
 			$(".card-goods").html("<a href='liebiao.html'>暂时没有任何商品</a>")
+			
 		}else{
 			var obj=JSON.parse(getCookie("cat"));
 		}
+		
+		for(var attr in obj){
+			$(".action-quantity-input").val(obj[attr])
+//			console.log(obj[attr])
+		}
+//		console.log(obj[attr])
+		
+		
 //		console.log(obj)
 		$.get("http://h6.duchengjiu.top/shop/api_goods.php",{"cat_id":"45"},function(data){
 			var data=data.data;
@@ -190,9 +199,9 @@
 		 					<li class="card-item-list">
 		 						<div class="prouduct-sort-show-buy">
 		 							<span class="p-quantity">
-            							<a href="javascript:void(0);" class="btn-decrease">-</a>
-            							<input type="text" size="2" name="goods[num]" class="action-quantity-input" value="1">
-            							<a href="javascript:void(0);" class="btn-increase">+</a>
+            							<a href="javascript:void(0);" data-id="${data[j].goods_id}" class="btn-decrease">-</a>
+            							<input type="text" size="2" name="goods[num]" class="action-quantity-input" value="${obj[attr]}">
+            							<a href="javascript:void(0);" data-id="${data[j].goods_id}" class="btn-increase">+</a>
             					</div>		
 		 					</li>
 		 					<li class="card-item-list">
@@ -216,18 +225,56 @@
 			var preid=this.getAttribute("data-id");
 			delete obj[preid];
 			
-			$(".card-item").remove()
+			$(".card-item")[0].remove()
 			setCookie("cat",JSON.stringify(obj),7)
 		})
 	
+	
+	
+	
+		
 		$(".btn-increase").click(function(){
-			if(getCookie("cat")==undefined){
-				var obj={};
+				
+			var productid=this.getAttribute("data-id")
+//			$data=JSON.parse($(data))
+			console.log(productid)
+//			console.log($(data)[0])
+//			for(var i=0;i<data.length;i++){
+//				if(productid==data[i].goods_id){
+//					
+//				}
+//			}
+			
+			if(obj[productid]==undefined){
+				obj[productid]=1
 			}else{
-				var obj=JSON.parse(getCookie("cat"))
+				
+				obj[productid]++
 			}
-			console.log(obj)
+//			console.log(obj[productid])
+//			$(".action-quantity-input").val(obj[productid])
+			$(this).siblings("input").val(obj[productid]);
+			setCookie("cat",JSON.stringify(obj),7);
+			
 		})
+		$(".btn-decrease").click(function(){
+			var productid=this.getAttribute("data-id")
+			
+			console.log(obj)
+			if(obj[productid]==undefined){
+				obj[productid]=1
+			}else{
+				obj[productid]--
+			}
+			if(obj[productid]<=1){
+				obj[productid]=1
+			}
+			console.log(obj[productid])
+			$(".action-quantity-input").val(obj[productid])
+			
+			setCookie("cat",JSON.stringify(obj),7);
+		})
+		
 //----------------------------------------------------			
 		})
 	})	

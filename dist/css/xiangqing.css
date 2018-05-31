@@ -41,6 +41,7 @@
     padding: 10px;
    	overflow: hidden;
     position: relative;
+  
     /*line-height: 0;*/
     /*font-size: 0;*/
 }
@@ -185,4 +186,36 @@
 }
 .infoCon{
 	height: 80px;
+}
+#fdj{
+	width: 210px;
+	height: 210px;
+	background: yellow;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.xiangqing{
+	position: relative;
+}
+.zoomdiv{
+	display: none;
+	height: 420px;
+	height: 420px;
+	/*background: red;*/
+	border: 1px solid #000000;
+	position: relative;
+	top: -500px;
+	left: 440px;
+	z-index: 100;
+	overflow: hidden;
+}
+.zoomdiv img{
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
