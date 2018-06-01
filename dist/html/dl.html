@@ -5,6 +5,9 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/dl.css"/>
+		<script src="../js/jquery-1.11.0.js" type="text/javascript"></script>
+			
+		
 	</head>
 	<body>
 				<!--头部-->
@@ -49,26 +52,31 @@
 						<span class="erweima"></span>
 						<i></i>
 					</h3>
-				<div class="denglu-sj">
+				<div class="denglu-sj dlsjh">
 					<input type="text" name="" id="" placeholder="用户名/邮箱/手机号" />
-					
-					<span>请输入正确的用户名/邮箱/手机号</span>
+					<span></span>
+					<span></span>
 					<b></b>
 				</div>
 				
 				<div class="denglu-sj dlmm">
-					<input type="text" name="" id="" placeholder="密码" />
-				
-					<span>请输入正确密码</span>
-					<b></b>
-				</div>
-				
-				<div class="denglu-sj yzm">
-					<input type="text" name="" id="" placeholder="验证码" />
-					<span>验证码不正确</span>
-					<b></b>
+					<input type="password" name="" id="" placeholder="密码" />
 					<span></span>
+					<span></span>
+					<b></b>
 				</div>
+				
+				<!--<div class="denglu-sj yzm">
+					<input type="text" name="" id="" placeholder="验证码" />
+					<span class="yzmcu"></span>
+					<span class="cw"></span>
+						
+					<b></b>
+					<span class="i"></span>
+					
+					
+					
+				</div>-->
 				
 				<div class="denglu-sj denglu">
 					<input type="button" name="" id="" value="登录" />
@@ -78,7 +86,7 @@
 					<input type="checkbox" name="" id="" value="" />
 					<span class="dl-right">自动登录</span>
 					<span>忘记密码</span>
-					<a href=""><span>免费注册</span></a>
+					<a href="../index.html"><span>免费注册</span></a>
 				</div>
 				
 				<div class="hzzhdl">
@@ -102,6 +110,135 @@
 			<p>购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
 		</footer>
 		</div>
-		
 	</body>
+	<script type="text/javascript">
+		$(function(){
+	//验证码  
+	function cod(){
+		var str="qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPLKJHGFDSAZXCVBNM";
+		var str1=0;
+		for(var i=0; i<4;i++){
+			str1+=str.charAt(Math.floor(Math.random()*62)) 
+		}
+		str1=str1.substring(1)
+		$(".yzm .i").text(str1);
+	}
+	cod();
+	$(".yzm .i").click(cod);	
+	////	验证码验证
+		$("input").eq(2).blur(function(){
+			
+//			console.log($(".dier i").text())
+		if($(this).val().length==0){
+			$(this).next("span").text("");
+			$(this).next("span").css("color",'#ccc');
+		
+		}
+		
+	})
+	
+		//	验证码验证
+//		$("input").eq(2).blur(function(){
+//			var $yzmval=$(".yzm input").val()
+//				console.log($(".i").text())
+////			console.log($(".dier i").text())
+//		if($(this).val().length==0){
+//			$(this).next("span").text("");
+//			$(this).next("span").css("color",'#ccc');
+//		
+//		}else if($yzmval.toUpperCase()!=$(".i").text().toUpperCase()){
+//			console.log("aa")
+//			$(".cw").show()	
+//			$(this).next("span").css("color","red");
+//		}else{
+//			$(".cw").hide()	
+//		}
+//		
+//	})
+	//sjh
+	$('input').eq(0).blur(function(){
+		if($("input").eq(0).val().length!=0){
+			$("input").eq(0).next("span").text("");
+		}
+	})
+	$('input').eq(1).blur(function(){
+				
+		if($("input").eq(1).val().length!=0){
+			$("input").eq(1).next("span").text("");
+		}
+	})
+//
+$('input').eq(2).focus(function(){
+		if($(this).val().length==0){
+			$(this).next().next("span").text("验证码输入错误");
+		}
+	})	
+		//
+	
+	
+	
+	$(".denglu").click(function(e){
+		
+	var $dlsjh=$(".dlsjh input").val()
+	var $dlmm=$(".dlmm input").val()
+	console.log($dlsjh)
+	console.log($dlmm)
+	$.post("http://h6.duchengjiu.top/shop/api_user.php",{
+		status:"login",
+		username:$dlsjh,
+		password:$dlmm
+	},function(data){
+		console.log(data)
+			if(data.code==0){
+				alert("登录成功")
+				location.assign("shouye.html")
+					
+				}else{	
+				alert(data.message)	
+			}
+		})
+		
+		
+		if($("input").eq(0).val().length==0){
+			$("input").eq(0).next("span").text("此处不能为空");
+		}else{
+			$("input").eq(0).next("span").text("");
+		}
+		for(var j=0;j<4;j++){
+			if($("input").eq(j).val().length==0){
+				$("input").eq(j).focus();
+				if(j==3){
+				$("input").eq(j).next().next("span").text("此处不能为空");
+				$("input").eq(j).next().next("span").css("color",'red');
+				e.preventDefault();
+	 				return;
+			}
+			$('input').eq(j).next("span").text("此处不能为空");
+			$('input').eq(j).next("span").css("color",'red');	
+				e.preventDefault();
+				return;
+		}
+		}
+		
+		return false;
+	
+	})
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		//下面是结束的符号
+		})
+		
+	</script>
 </html>

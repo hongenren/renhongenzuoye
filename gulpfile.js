@@ -38,3 +38,4 @@ gulp.task('copy-index',function(){
 gulp.task('sever',function(){ 
 	connect.server({root:'dist'});
 })
+ 
