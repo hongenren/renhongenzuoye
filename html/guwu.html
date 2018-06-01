@@ -266,11 +266,13 @@
 			}else{
 				obj[productid]--
 			}
+			
 			if(obj[productid]<=1){
 				obj[productid]=1
 			}
 			console.log(obj[productid])
-			$(".action-quantity-input").val(obj[productid])
+			$(this).siblings("input").val(obj[productid]);
+//			$(".action-quantity-input").val(obj[productid])
 			
 			setCookie("cat",JSON.stringify(obj),7);
 		})
