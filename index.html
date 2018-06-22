@@ -18,7 +18,7 @@
 				
 			
 			<div class="top-logo">
-				<p><a href=""><img src="img/logo.png"/></a></p>
+				<p><a href="html/shouye.html"><img src="img/logo.png"/></a></p>
 				<a href="#"><img src="img/slogan.jpg"/></a>
 			</div>
 			<div class="top-nav">
@@ -174,13 +174,16 @@
 		
 // 	验证码
 //	 验证码刷新			
+//charAt() 方法可返回指定位置的字符。
 function cod(){
+	
 		var str="qwertyuiopasdfghjklzxcvbnm1234567890QWERTYUIOPLKJHGFDSAZXCVBNM";
-		var str1=0;
+		var str1="";
 		for(var i=0; i<4;i++){
 			str1+=str.charAt(Math.floor(Math.random()*62)) 
 		}
-		str1=str1.substring(1)
+		console.log(str1)
+//		str1=str1.substring(1)
 		$(".dier i").text(str1);
 	}
 	cod();
